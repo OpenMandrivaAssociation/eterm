@@ -1,6 +1,6 @@
 %define oname	Eterm
 %define version 0.9.5
-%define release %mkrel 13
+%define release %mkrel 14
 
 # this situation is similar to Berkeley DB
 %define major	%{version}
@@ -65,7 +65,7 @@ This library is essential for Eterm to work.
 %package -n %{devname}
 Summary:	Devel files for Eterm
 Group:		Development/Other
-Requires:	%{name} = %{version}
+Requires:	%{libname} = %{version}-%{release}
 Obsoletes:	%{oname}-devel < 0.9.5-13
 Obsoletes:	%{mklibname -d -s Eterm} < 0.9.5-13
 Provides:	%{name}-devel = %{version}-%{release}
