@@ -1,6 +1,6 @@
 %define oname	Eterm
 %define version 0.9.5
-%define release %mkrel 15
+%define release %mkrel 16
 
 # this situation is similar to Berkeley DB
 %define major	%{version}
@@ -14,8 +14,8 @@ Release:	%{release}
 License:	BSD
 Group:		Terminals
 URL:		http://eterm.sourceforge.net/
-Source0:	http://www.eterm.org/download/%{oname}-%{version}.tar.bz2
-Source5:	http://www.eterm.org/download/%{oname}-bg-0.9.3.tar.bz2
+Source0:	http://www.eterm.org/download/%{oname}-%{version}.tar.gz
+Source5:	http://www.eterm.org/download/%{oname}-bg-%{version}.tar.gz
 
 BuildRequires:	imlib2-devel
 BuildRequires:	libast-devel >= 0.5
@@ -147,7 +147,7 @@ update-alternatives --install /usr/bin/xvt xvt /usr/bin/Eterm 15
 
 %files
 %defattr(-, root, root)
-%doc ChangeLog README ReleaseNotes doc/Eterm_reference.html doc/README.Escreen doc/escreen.cfg doc/gen-menus
+%doc ChangeLog README ReleaseNotes doc/Eterm_reference.html doc/README.Escreen
 %{_bindir}/*
 %dir %{_datadir}/Eterm
 %config(noreplace) %{_datadir}/Eterm/themes
