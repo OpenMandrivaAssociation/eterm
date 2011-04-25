@@ -1,6 +1,6 @@
 %define oname	Eterm
 %define version 0.9.5
-%define release %mkrel 14
+%define release %mkrel 15
 
 # this situation is similar to Berkeley DB
 %define major	%{version}
@@ -48,6 +48,7 @@ to work and integrate best with Enlightenment.
 Summary:	Library from Eterm (Enlightened Terminal Emulator)
 Group:		Terminals
 Obsoletes:	%{mklibname Eterm 0.9.5} < 0.9.5-13
+Provides:	%{mklibname Eterm 0.9.5} = %{version}-%{release}
 
 %description -n	%{libname}
 Eterm is a color vt102 terminal emulator intended as a replacement for Xterm.
@@ -69,6 +70,7 @@ Requires:	%{libname} = %{version}-%{release}
 Obsoletes:	%{oname}-devel < 0.9.5-13
 Obsoletes:	%{mklibname -d -s Eterm} < 0.9.5-13
 Provides:	%{name}-devel = %{version}-%{release}
+Provides:	%{oname}-devel = %{version}-%{release}
 
 %description -n %{devname}
 Eterm is a color vt102 terminal emulator intended as a replacement for Xterm.
