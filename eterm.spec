@@ -1,6 +1,6 @@
 %define oname	Eterm
-%define version 0.9.5
-%define release %mkrel 16
+%define version 0.9.6
+%define release %mkrel 1
 
 # this situation is similar to Berkeley DB
 %define major	%{version}
@@ -31,7 +31,7 @@ Requires(pre):	ncurses
 Requires(post):	diffutils
 Conflicts:	ncurses-extraterms
 Provides:	%{oname} = %{version}-%{release}
-Obsoletes:	%{oname} < 0.9.5-13
+Obsoletes:	%{oname} < %{version}-%{release}
 
 %description
 Eterm is a color vt102 terminal emulator intended as a replacement for Xterm.
@@ -47,7 +47,7 @@ to work and integrate best with Enlightenment.
 %package -n %{libname}
 Summary:	Library from Eterm (Enlightened Terminal Emulator)
 Group:		Terminals
-Obsoletes:	%{mklibname Eterm 0.9.5} < 0.9.5-13
+Obsoletes:	%{mklibname Eterm 0.9.5} < %{version}-%{release}
 Provides:	%{mklibname Eterm 0.9.5} = %{version}-%{release}
 
 %description -n	%{libname}
@@ -67,8 +67,8 @@ This library is essential for Eterm to work.
 Summary:	Devel files for Eterm
 Group:		Development/Other
 Requires:	%{libname} = %{version}-%{release}
-Obsoletes:	%{oname}-devel < 0.9.5-13
-Obsoletes:	%{mklibname -d -s Eterm} < 0.9.5-13
+Obsoletes:	%{oname}-devel < %{version}-%{release}
+Obsoletes:	%{mklibname -d -s Eterm} < %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
 Provides:	%{oname}-devel = %{version}-%{release}
 
