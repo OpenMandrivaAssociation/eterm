@@ -118,7 +118,7 @@ rm -fr %{buildroot}
 
 # Install menu
 mkdir -p %{buildroot}%{_datadir}/applications
-cat > %{buildroot}%{_datadir}/applications/%{_real_vendor}-%{name}.desktop << EOF
+cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
 Name=Eterm
 Comment=Enlightened Terminal Emulator
