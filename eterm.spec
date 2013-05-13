@@ -1,6 +1,6 @@
 %define oname	Eterm
 %define version 0.9.6
-%define release 2
+%define release  3
 
 # this situation is similar to Berkeley DB
 %define major	%{version}
