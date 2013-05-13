@@ -20,10 +20,10 @@ Source5:	http://www.eterm.org/download/%{oname}-bg-%{version}.tar.gz
 BuildRequires:	imlib2-devel
 BuildRequires:	libast-devel >= 0.5
 BuildRequires:	utempter-devel
-BuildRequires:	libx11-devel twin-devel
-BuildRequires:	libxres-devel
-BuildRequires:	libxext-devel
-BuildRequires:	libxmu-devel
+BuildRequires:	pkgconfig(x11) twin-devel
+BuildRequires:	pkgconfig(xres)
+BuildRequires:	pkgconfig(xext)
+BuildRequires:	pkgconfig(xmu)
 BuildRequires:  groff-for-man man
 BuildRequires:	gdb
 Requires(pre):	ncurses
