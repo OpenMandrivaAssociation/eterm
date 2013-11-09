@@ -122,7 +122,7 @@ cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
 Name=Eterm
 Comment=Enlightened Terminal Emulator
-Exec=%{name}
+Exec=Eterm
 Icon=terminals_section
 Terminal=false
 Type=Application
@@ -139,11 +139,11 @@ rm -rf %{buildroot}%{_libdir}/*.la
 rm -rf %{buildroot}
 
 %post
-update-alternatives --install /usr/bin/xvt xvt /usr/bin/Eterm 15
+update-alternatives --install %{_bindir}/xvt xvt %{_bindir}/Eterm 15 || :
 %{_bindir}/Etbg_update_list
 
 %postun
-[ "$1" = "0" ]&& update-alternatives --remove xvt /usr/bin/Eterm
+[[ "$1" = "0" ]] && update-alternatives --remove xvt %{_bindir}/Eterm || :
 
 %files
 %defattr(-, root, root)
