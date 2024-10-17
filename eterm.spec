@@ -13,7 +13,7 @@ Version:	%{version}
 Release:	%{release}
 License:	BSD
 Group:		Terminals
-URL:		http://eterm.sourceforge.net/
+URL:		https://eterm.sourceforge.net/
 Source0:	http://www.eterm.org/download/%{oname}-%{version}.tar.gz
 Source5:	http://www.eterm.org/download/%{oname}-bg-%{version}.tar.gz
 
