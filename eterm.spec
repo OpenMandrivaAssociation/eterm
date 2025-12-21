@@ -17,6 +17,11 @@ URL:		https://eterm.sourceforge.net/
 Source0:	http://www.eterm.org/download/%{oname}-%{version}.tar.gz
 Source5:	http://www.eterm.org/download/%{oname}-bg-%{version}.tar.gz
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	imlib2-devel
 BuildRequires:	libast-devel >= 0.5
 BuildRequires:	utempter-devel
